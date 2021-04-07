@@ -170,6 +170,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/bios/Bios.o: src/bios/Bios.cpp.o
+
+.PHONY : src/bios/Bios.o
+
+# target to build an object file
+src/bios/Bios.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/bios/Bios.cpp.o
+.PHONY : src/bios/Bios.cpp.o
+
+src/bios/Bios.i: src/bios/Bios.cpp.i
+
+.PHONY : src/bios/Bios.i
+
+# target to preprocess a source file
+src/bios/Bios.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/bios/Bios.cpp.i
+.PHONY : src/bios/Bios.cpp.i
+
+src/bios/Bios.s: src/bios/Bios.cpp.s
+
+.PHONY : src/bios/Bios.s
+
+# target to generate assembly for a file
+src/bios/Bios.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/bios/Bios.cpp.s
+.PHONY : src/bios/Bios.cpp.s
+
 src/cpu/Cpu.o: src/cpu/Cpu.cpp.o
 
 .PHONY : src/cpu/Cpu.o
@@ -197,6 +224,60 @@ src/cpu/Cpu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/cpu/Cpu.cpp.s
 .PHONY : src/cpu/Cpu.cpp.s
 
+src/interconnect/Interconnect.o: src/interconnect/Interconnect.cpp.o
+
+.PHONY : src/interconnect/Interconnect.o
+
+# target to build an object file
+src/interconnect/Interconnect.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o
+.PHONY : src/interconnect/Interconnect.cpp.o
+
+src/interconnect/Interconnect.i: src/interconnect/Interconnect.cpp.i
+
+.PHONY : src/interconnect/Interconnect.i
+
+# target to preprocess a source file
+src/interconnect/Interconnect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.i
+.PHONY : src/interconnect/Interconnect.cpp.i
+
+src/interconnect/Interconnect.s: src/interconnect/Interconnect.cpp.s
+
+.PHONY : src/interconnect/Interconnect.s
+
+# target to generate assembly for a file
+src/interconnect/Interconnect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.s
+.PHONY : src/interconnect/Interconnect.cpp.s
+
+src/range/Range.o: src/range/Range.cpp.o
+
+.PHONY : src/range/Range.o
+
+# target to build an object file
+src/range/Range.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/range/Range.cpp.o
+.PHONY : src/range/Range.cpp.o
+
+src/range/Range.i: src/range/Range.cpp.i
+
+.PHONY : src/range/Range.i
+
+# target to preprocess a source file
+src/range/Range.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/range/Range.cpp.i
+.PHONY : src/range/Range.cpp.i
+
+src/range/Range.s: src/range/Range.cpp.s
+
+.PHONY : src/range/Range.s
+
+# target to generate assembly for a file
+src/range/Range.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/range/Range.cpp.s
+.PHONY : src/range/Range.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -209,9 +290,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/bios/Bios.o"
+	@echo "... src/bios/Bios.i"
+	@echo "... src/bios/Bios.s"
 	@echo "... src/cpu/Cpu.o"
 	@echo "... src/cpu/Cpu.i"
 	@echo "... src/cpu/Cpu.s"
+	@echo "... src/interconnect/Interconnect.o"
+	@echo "... src/interconnect/Interconnect.i"
+	@echo "... src/interconnect/Interconnect.s"
+	@echo "... src/range/Range.o"
+	@echo "... src/range/Range.i"
+	@echo "... src/range/Range.s"
 .PHONY : help
 
 

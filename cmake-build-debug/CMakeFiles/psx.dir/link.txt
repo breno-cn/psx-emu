@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/psx.dir/main.cpp.o CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o  -o psx 
+/usr/bin/c++  -g   CMakeFiles/psx.dir/main.cpp.o CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o CMakeFiles/psx.dir/src/bios/Bios.cpp.o CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o CMakeFiles/psx.dir/src/range/Range.cpp.o  -o psx 

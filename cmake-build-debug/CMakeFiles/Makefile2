@@ -94,12 +94,12 @@ clean: CMakeFiles/psx.dir/clean
 CMakeFiles/psx.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target psx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target psx"
 .PHONY : CMakeFiles/psx.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/psx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/psx.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/psx.dir/rule

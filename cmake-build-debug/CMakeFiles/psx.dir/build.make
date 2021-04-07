@@ -103,19 +103,64 @@ CMakeFiles/psx.dir/src/cpu/Cpu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/psx.dir/src/cpu/Cpu.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/breno/CLionProjects/psx/src/cpu/Cpu.cpp -o CMakeFiles/psx.dir/src/cpu/Cpu.cpp.s
 
+CMakeFiles/psx.dir/src/bios/Bios.cpp.o: CMakeFiles/psx.dir/flags.make
+CMakeFiles/psx.dir/src/bios/Bios.cpp.o: ../src/bios/Bios.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/psx.dir/src/bios/Bios.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/psx.dir/src/bios/Bios.cpp.o -c /home/breno/CLionProjects/psx/src/bios/Bios.cpp
+
+CMakeFiles/psx.dir/src/bios/Bios.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/psx.dir/src/bios/Bios.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/breno/CLionProjects/psx/src/bios/Bios.cpp > CMakeFiles/psx.dir/src/bios/Bios.cpp.i
+
+CMakeFiles/psx.dir/src/bios/Bios.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/psx.dir/src/bios/Bios.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/breno/CLionProjects/psx/src/bios/Bios.cpp -o CMakeFiles/psx.dir/src/bios/Bios.cpp.s
+
+CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o: CMakeFiles/psx.dir/flags.make
+CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o: ../src/interconnect/Interconnect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o -c /home/breno/CLionProjects/psx/src/interconnect/Interconnect.cpp
+
+CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/breno/CLionProjects/psx/src/interconnect/Interconnect.cpp > CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.i
+
+CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/breno/CLionProjects/psx/src/interconnect/Interconnect.cpp -o CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.s
+
+CMakeFiles/psx.dir/src/range/Range.cpp.o: CMakeFiles/psx.dir/flags.make
+CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/range/Range.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/psx.dir/src/range/Range.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/psx.dir/src/range/Range.cpp.o -c /home/breno/CLionProjects/psx/src/range/Range.cpp
+
+CMakeFiles/psx.dir/src/range/Range.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/psx.dir/src/range/Range.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/breno/CLionProjects/psx/src/range/Range.cpp > CMakeFiles/psx.dir/src/range/Range.cpp.i
+
+CMakeFiles/psx.dir/src/range/Range.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/psx.dir/src/range/Range.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/breno/CLionProjects/psx/src/range/Range.cpp -o CMakeFiles/psx.dir/src/range/Range.cpp.s
+
 # Object files for target psx
 psx_OBJECTS = \
 "CMakeFiles/psx.dir/main.cpp.o" \
-"CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o"
+"CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o" \
+"CMakeFiles/psx.dir/src/bios/Bios.cpp.o" \
+"CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o" \
+"CMakeFiles/psx.dir/src/range/Range.cpp.o"
 
 # External object files for target psx
 psx_EXTERNAL_OBJECTS =
 
 psx: CMakeFiles/psx.dir/main.cpp.o
 psx: CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o
+psx: CMakeFiles/psx.dir/src/bios/Bios.cpp.o
+psx: CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o
+psx: CMakeFiles/psx.dir/src/range/Range.cpp.o
 psx: CMakeFiles/psx.dir/build.make
 psx: CMakeFiles/psx.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable psx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable psx"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/psx.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

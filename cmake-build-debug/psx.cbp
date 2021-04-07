@@ -85,10 +85,28 @@
 		<Unit filename="/home/breno/CLionProjects/psx/main.cpp">
 			<Option target="psx"/>
 		</Unit>
+		<Unit filename="/home/breno/CLionProjects/psx/src/bios/Bios.cpp">
+			<Option target="psx"/>
+		</Unit>
+		<Unit filename="/home/breno/CLionProjects/psx/src/bios/Bios.h">
+			<Option target="psx"/>
+		</Unit>
 		<Unit filename="/home/breno/CLionProjects/psx/src/cpu/Cpu.cpp">
 			<Option target="psx"/>
 		</Unit>
 		<Unit filename="/home/breno/CLionProjects/psx/src/cpu/Cpu.h">
+			<Option target="psx"/>
+		</Unit>
+		<Unit filename="/home/breno/CLionProjects/psx/src/interconnect/Interconnect.cpp">
+			<Option target="psx"/>
+		</Unit>
+		<Unit filename="/home/breno/CLionProjects/psx/src/interconnect/Interconnect.h">
+			<Option target="psx"/>
+		</Unit>
+		<Unit filename="/home/breno/CLionProjects/psx/src/range/Range.cpp">
+			<Option target="psx"/>
+		</Unit>
+		<Unit filename="/home/breno/CLionProjects/psx/src/range/Range.h">
 			<Option target="psx"/>
 		</Unit>
 		<Unit filename="/home/breno/CLionProjects/psx/CMakeLists.txt">
