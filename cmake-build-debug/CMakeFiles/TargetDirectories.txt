@@ -1,0 +1,3 @@
+/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir

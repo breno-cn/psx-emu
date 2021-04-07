@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/psx.dir/main.cpp.o CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o  -o psx 
