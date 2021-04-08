@@ -8,8 +8,9 @@ int main() {
     Bios bios;
     Interconnect interconnect(&bios);
     Cpu cpu(&interconnect);
+    bool running = true;
 
-    while (true) {
+    while (running) {
         cpu.runNextInstruction();
     }
 

@@ -97,6 +97,12 @@
 		<Unit filename="/home/breno/CLionProjects/psx/src/cpu/Cpu.h">
 			<Option target="psx"/>
 		</Unit>
+		<Unit filename="/home/breno/CLionProjects/psx/src/cpu/Instruction.cpp">
+			<Option target="psx"/>
+		</Unit>
+		<Unit filename="/home/breno/CLionProjects/psx/src/cpu/Instruction.h">
+			<Option target="psx"/>
+		</Unit>
 		<Unit filename="/home/breno/CLionProjects/psx/src/interconnect/Interconnect.cpp">
 			<Option target="psx"/>
 		</Unit>

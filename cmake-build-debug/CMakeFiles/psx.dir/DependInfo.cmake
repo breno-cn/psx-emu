@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/breno/CLionProjects/psx/main.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/main.cpp.o"
   "/home/breno/CLionProjects/psx/src/bios/Bios.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/src/bios/Bios.cpp.o"
   "/home/breno/CLionProjects/psx/src/cpu/Cpu.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o"
+  "/home/breno/CLionProjects/psx/src/cpu/Instruction.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o"
   "/home/breno/CLionProjects/psx/src/interconnect/Interconnect.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o"
   "/home/breno/CLionProjects/psx/src/range/Range.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/src/range/Range.cpp.o"
   )

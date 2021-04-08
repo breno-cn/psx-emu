@@ -224,6 +224,33 @@ src/cpu/Cpu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/cpu/Cpu.cpp.s
 .PHONY : src/cpu/Cpu.cpp.s
 
+src/cpu/Instruction.o: src/cpu/Instruction.cpp.o
+
+.PHONY : src/cpu/Instruction.o
+
+# target to build an object file
+src/cpu/Instruction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o
+.PHONY : src/cpu/Instruction.cpp.o
+
+src/cpu/Instruction.i: src/cpu/Instruction.cpp.i
+
+.PHONY : src/cpu/Instruction.i
+
+# target to preprocess a source file
+src/cpu/Instruction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/cpu/Instruction.cpp.i
+.PHONY : src/cpu/Instruction.cpp.i
+
+src/cpu/Instruction.s: src/cpu/Instruction.cpp.s
+
+.PHONY : src/cpu/Instruction.s
+
+# target to generate assembly for a file
+src/cpu/Instruction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psx.dir/build.make CMakeFiles/psx.dir/src/cpu/Instruction.cpp.s
+.PHONY : src/cpu/Instruction.cpp.s
+
 src/interconnect/Interconnect.o: src/interconnect/Interconnect.cpp.o
 
 .PHONY : src/interconnect/Interconnect.o
@@ -296,6 +323,9 @@ help:
 	@echo "... src/cpu/Cpu.o"
 	@echo "... src/cpu/Cpu.i"
 	@echo "... src/cpu/Cpu.s"
+	@echo "... src/cpu/Instruction.o"
+	@echo "... src/cpu/Instruction.i"
+	@echo "... src/cpu/Instruction.s"
 	@echo "... src/interconnect/Interconnect.o"
 	@echo "... src/interconnect/Interconnect.i"
 	@echo "... src/interconnect/Interconnect.s"

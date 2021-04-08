@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/psx.dir/main.cpp.o"
   "CMakeFiles/psx.dir/src/bios/Bios.cpp.o"
   "CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o"
+  "CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o"
   "CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o"
   "CMakeFiles/psx.dir/src/range/Range.cpp.o"
   "psx"

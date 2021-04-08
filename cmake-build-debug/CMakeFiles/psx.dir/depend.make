@@ -4,6 +4,7 @@
 CMakeFiles/psx.dir/main.cpp.o: ../main.cpp
 CMakeFiles/psx.dir/main.cpp.o: ../src/bios/Bios.h
 CMakeFiles/psx.dir/main.cpp.o: ../src/cpu/Cpu.h
+CMakeFiles/psx.dir/main.cpp.o: ../src/cpu/Instruction.h
 CMakeFiles/psx.dir/main.cpp.o: ../src/interconnect/Interconnect.h
 
 CMakeFiles/psx.dir/src/bios/Bios.cpp.o: ../src/bios/Bios.cpp
@@ -12,16 +13,22 @@ CMakeFiles/psx.dir/src/bios/Bios.cpp.o: ../src/bios/Bios.h
 CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/bios/Bios.h
 CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/cpu/Cpu.cpp
 CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/cpu/Cpu.h
+CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/cpu/Instruction.h
 CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/interconnect/Interconnect.h
+
+CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o: ../src/cpu/Instruction.cpp
+CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o: ../src/cpu/Instruction.h
 
 CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o: ../src/bios/Bios.h
 CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o: ../src/cpu/Cpu.h
+CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o: ../src/cpu/Instruction.h
 CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o: ../src/interconnect/Interconnect.cpp
 CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o: ../src/interconnect/Interconnect.h
 CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o: ../src/range/Range.h
 
 CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/bios/Bios.h
 CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/cpu/Cpu.h
+CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/cpu/Instruction.h
 CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/interconnect/Interconnect.h
 CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/range/Range.cpp
 CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/range/Range.h

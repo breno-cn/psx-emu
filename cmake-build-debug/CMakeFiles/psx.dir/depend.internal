@@ -5,6 +5,7 @@ CMakeFiles/psx.dir/main.cpp.o
  /home/breno/CLionProjects/psx/main.cpp
  /home/breno/CLionProjects/psx/src/bios/Bios.h
  /home/breno/CLionProjects/psx/src/cpu/Cpu.h
+ /home/breno/CLionProjects/psx/src/cpu/Instruction.h
  /home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
 CMakeFiles/psx.dir/src/bios/Bios.cpp.o
  /home/breno/CLionProjects/psx/src/bios/Bios.cpp
@@ -13,16 +14,22 @@ CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o
  /home/breno/CLionProjects/psx/src/bios/Bios.h
  /home/breno/CLionProjects/psx/src/cpu/Cpu.cpp
  /home/breno/CLionProjects/psx/src/cpu/Cpu.h
+ /home/breno/CLionProjects/psx/src/cpu/Instruction.h
  /home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
+CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o
+ /home/breno/CLionProjects/psx/src/cpu/Instruction.cpp
+ /home/breno/CLionProjects/psx/src/cpu/Instruction.h
 CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o
  /home/breno/CLionProjects/psx/src/bios/Bios.h
  /home/breno/CLionProjects/psx/src/cpu/Cpu.h
+ /home/breno/CLionProjects/psx/src/cpu/Instruction.h
  /home/breno/CLionProjects/psx/src/interconnect/Interconnect.cpp
  /home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
  /home/breno/CLionProjects/psx/src/range/Range.h
 CMakeFiles/psx.dir/src/range/Range.cpp.o
  /home/breno/CLionProjects/psx/src/bios/Bios.h
  /home/breno/CLionProjects/psx/src/cpu/Cpu.h
+ /home/breno/CLionProjects/psx/src/cpu/Instruction.h
  /home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
  /home/breno/CLionProjects/psx/src/range/Range.cpp
  /home/breno/CLionProjects/psx/src/range/Range.h
