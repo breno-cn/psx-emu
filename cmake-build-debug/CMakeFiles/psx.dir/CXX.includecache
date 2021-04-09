@@ -49,6 +49,8 @@ array
 /home/breno/CLionProjects/psx/src/cpu/Instruction.cpp
 Instruction.h
 /home/breno/CLionProjects/psx/src/cpu/Instruction.h
+cstdint
+-
 
 /home/breno/CLionProjects/psx/src/cpu/Instruction.h
 cstdint

@@ -17,6 +17,8 @@ public:
     ~Interconnect();
 
     uint32_t load32(uint32_t addr);
+
+    void store32(uint32_t addr, uint32_t value);
 };
 
 

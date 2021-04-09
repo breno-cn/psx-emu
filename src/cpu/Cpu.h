@@ -27,6 +27,7 @@ public:
     void runNextInstruction();
     void reset();
     uint32_t load32(uint32_t addr);
+    void store32(uint32_t addr, uint32_t value);
 
     void decodeAndExecute(Instruction& instruction);
 
@@ -39,6 +40,7 @@ public:
 //  LOAD UPPER IMMEDIATE
     void LUI(Instruction instruction);
     void ORI(Instruction instruction);
+    void SW(Instruction instruction);
 };
 
 
