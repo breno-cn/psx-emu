@@ -44,6 +44,28 @@ void Interconnect::store32(uint32_t addr, uint32_t value) {
         std::exit(1);
     }
 
+    uint32_t offset = range::MEM_CONTROL.contains(addr);
+    if (offset != -1) {
+        switch (offset) {
+            case 0:
+                if (value != 0x1f00000) {
+                    std::cout << "bad expansion base at " << std::hex << value << std::endl;
+                    std::exit(1);
+                }
+                break;
+
+            case 1:
+                if (value != 0x1f802000) {
+                    std::cout << "bad expansion base at " << std::hex << value << std::endl;
+                    std::exit(1);
+                }
+
+            default:
+                std::cout << "unhandled expansion at " << std::hex << value << std::endl;
+                std::exit(1);
+        }
+    }
+
     std::cout << "unhandled store32 at addr " << std::hex << addr << " with value " << std::hex << value  << std::endl;
     std::exit(1);
 }

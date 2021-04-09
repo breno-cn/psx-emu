@@ -30,8 +30,6 @@ typedef union {
     } jType;
 
     uint32_t word;
-
-    uint32_t function();
 } Instruction;
 
 //class Instruction {

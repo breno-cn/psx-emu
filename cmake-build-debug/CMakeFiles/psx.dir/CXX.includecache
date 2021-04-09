@@ -6,34 +6,10 @@
 
 #IncludeRegexTransform: 
 
-/home/breno/CLionProjects/psx/main.cpp
-iostream
--
-src/bios/Bios.h
-/home/breno/CLionProjects/psx/src/bios/Bios.h
-src/cpu/Cpu.h
-/home/breno/CLionProjects/psx/src/cpu/Cpu.h
-src/interconnect/Interconnect.h
-/home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
-
 /home/breno/CLionProjects/psx/src/bios/Bios.h
 cstdint
 -
 array
--
-
-/home/breno/CLionProjects/psx/src/cpu/Cpu.cpp
-Cpu.h
-/home/breno/CLionProjects/psx/src/cpu/Cpu.h
-Instruction.h
-/home/breno/CLionProjects/psx/src/cpu/Instruction.h
-iostream
--
-cstdint
--
-cstdlib
--
-algorithm
 -
 
 /home/breno/CLionProjects/psx/src/cpu/Cpu.h
@@ -44,12 +20,6 @@ Instruction.h
 cstdint
 -
 array
--
-
-/home/breno/CLionProjects/psx/src/cpu/Instruction.cpp
-Instruction.h
-/home/breno/CLionProjects/psx/src/cpu/Instruction.h
-cstdint
 -
 
 /home/breno/CLionProjects/psx/src/cpu/Instruction.h
@@ -69,10 +39,6 @@ iostream
 /home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
 ../bios/Bios.h
 /home/breno/CLionProjects/psx/src/bios/Bios.h
-
-/home/breno/CLionProjects/psx/src/range/Range.cpp
-Range.h
-/home/breno/CLionProjects/psx/src/range/Range.h
 
 /home/breno/CLionProjects/psx/src/range/Range.h
 cstdint
