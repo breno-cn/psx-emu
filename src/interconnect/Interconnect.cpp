@@ -70,6 +70,12 @@ void Interconnect::store32(uint32_t addr, uint32_t value) {
         return;
     }
 
+    offset = range::RAM_SIZE.contains(addr);
+    if (offset != -1) {
+        std::cout << "unhandled write to RAM_SIZE at addr " << std::hex << addr << " with offset " << std::hex << offset << std::endl;
+        return;
+    }
+
     std::cout << "unhandled store32 at addr " << std::hex << addr << " with value " << std::hex << value  << std::endl;
     std::exit(1);
 }

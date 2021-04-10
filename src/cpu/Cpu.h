@@ -42,6 +42,7 @@ public:
     void ORI(Instruction& instruction);
     void SW(Instruction& instruction);
     void SLL(Instruction& instruction);
+    void ADDIU(Instruction& instruction);
 };
 
 

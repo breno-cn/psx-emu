@@ -29,6 +29,11 @@ namespace range {
 
 //    TODO: constantes apropriadas pra MEM_CONTROL
     static Range MEM_CONTROL = Range(0x1f801000, 36);
+
+//    TODO: constantes para RAM_SIZE
+//    TODO: etudar esse registrador, parece nao ser necessario emular ele para o ps1, apenas
+//          se fosse emular um processador MIPS completo
+    static Range RAM_SIZE = Range(0x1f801060, 4);
 }
 
 

@@ -12,20 +12,6 @@ cstdint
 array
 -
 
-/home/breno/CLionProjects/psx/src/cpu/Cpu.cpp
-Cpu.h
-/home/breno/CLionProjects/psx/src/cpu/Cpu.h
-Instruction.h
-/home/breno/CLionProjects/psx/src/cpu/Instruction.h
-iostream
--
-cstdint
--
-cstdlib
--
-algorithm
--
-
 /home/breno/CLionProjects/psx/src/cpu/Cpu.h
 ../interconnect/Interconnect.h
 /home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
@@ -40,7 +26,29 @@ array
 cstdint
 -
 
+/home/breno/CLionProjects/psx/src/interconnect/Interconnect.cpp
+Interconnect.h
 /home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
+cstdlib
+-
+iostream
+-
+../range/Range.h
+/home/breno/CLionProjects/psx/src/range/Range.h
+
+/home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
+../bios/Bios.h
+/home/breno/CLionProjects/psx/src/bios/Bios.h
+
+/home/breno/CLionProjects/psx/src/range/Range.cpp
+Range.h
+/home/breno/CLionProjects/psx/src/range/Range.h
+
+/home/breno/CLionProjects/psx/src/range/Range.h
+cstdint
+-
+../cpu/Cpu.h
+/home/breno/CLionProjects/psx/src/cpu/Cpu.h
 ../bios/Bios.h
 /home/breno/CLionProjects/psx/src/bios/Bios.h
 

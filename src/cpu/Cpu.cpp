@@ -50,6 +50,7 @@ void Cpu::decodeAndExecute(Instruction& instruction) {
     auto op = instruction.op();
 
     std::cout << "DEBUG WORD " << std::hex << instruction.word << std::endl;
+    std::cout << "OP: " << std::hex << op << std::endl;
 
     switch (op) {
         case 0b001111:
@@ -62,6 +63,10 @@ void Cpu::decodeAndExecute(Instruction& instruction) {
 
         case 0b101011:
             SW(instruction);
+            break;
+
+        case 0b001001:
+            ADDIU(instruction);
             break;
 
         case 0b000000:
@@ -148,4 +153,13 @@ void Cpu::SLL(Instruction& instruction) {
 
     auto value = this->reg(rt) << shamt;
     this->setReg(rd, value);
+}
+
+void Cpu::ADDIU(Instruction &instruction) {
+    auto imm = instruction.imm();
+    auto rt = instruction.rt();
+    auto rs = instruction.rs();
+    auto value = this->reg(rs) + imm;
+
+    this->setReg(rt, value);
 }
