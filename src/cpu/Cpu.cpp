@@ -24,8 +24,14 @@ Cpu::~Cpu() {
 void Cpu::runNextInstruction() {
 //  Busca a instrução do PC
 //    uint32_t instruction = this->load32(this->pc);
-    Instruction instruction(this->load32(this->pc));
+//    Instruction instruction(this->load32(this->pc));
 //    Instruction instruction = {.word = this->load32(this->pc)};
+
+// Usa a instrução previamente carregada
+    Instruction instruction = this->nextInstruction;
+
+//    Busca a proxima instrucao no PC
+    this->nextInstruction = Instruction(this->load32(this->pc));
 
 //    Incrementa PC
     this->pc += 4;
@@ -35,6 +41,7 @@ void Cpu::runNextInstruction() {
 
 void Cpu::reset() {
     this->pc = Cpu::PC_RESET_ADDR;
+    this->nextInstruction = Instruction(0x0);
 
 //    Lixo de memoria que pode ajudar a debugar
     std::fill(registers.begin(), registers.end(),0xdeadbeef);
@@ -47,12 +54,12 @@ uint32_t Cpu::load32(uint32_t addr) {
 
 // TODO: talvez fazer um sistema de log, buscar alguma lib
 void Cpu::decodeAndExecute(Instruction& instruction) {
-    auto op = instruction.op();
+//    auto op = instruction.op();
 
     std::cout << "DEBUG WORD " << std::hex << instruction.word << std::endl;
-    std::cout << "OP: " << std::hex << op << std::endl;
+    std::cout << "OP: " << std::hex << instruction.op() << std::endl;
 
-    switch (op) {
+    switch (instruction.op()) {
         case 0b001111:
             LUI(instruction);
             break;
@@ -75,10 +82,18 @@ void Cpu::decodeAndExecute(Instruction& instruction) {
                     SLL(instruction);
                     break;
 
+                case 0b100101:
+                    OR(instruction);
+                    break;
+
                 default:
                     std::cout << "unhandled instruction at function " << std::hex << instruction.word << std::endl;
                     std::exit(1);
             }
+            break;
+
+        case 0b000010:
+            J(instruction);
             break;
 
         default:
@@ -162,4 +177,20 @@ void Cpu::ADDIU(Instruction &instruction) {
     auto value = this->reg(rs) + imm;
 
     this->setReg(rt, value);
+}
+
+void Cpu::J(Instruction &instruction) {
+    auto imm = instruction.addr();
+
+    this->pc = (this->pc & 0xf0000000) | (imm << 2);
+}
+
+void Cpu::OR(Instruction &instruction) {
+    auto rd = instruction.rd();
+    auto rs = instruction.rs();
+    auto rt = instruction.rt();
+
+    auto value = this->reg(rs) | this->reg(rt);
+
+    this->setReg(rd, value);
 }

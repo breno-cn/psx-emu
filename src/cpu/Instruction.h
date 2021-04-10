@@ -36,7 +36,10 @@ class Instruction {
 public:
     uint32_t word;
 
+    Instruction() = default;
     Instruction(uint32_t word);
+
+    void loadWord(uint32_t word);
 
     uint32_t op();
     uint32_t rs();

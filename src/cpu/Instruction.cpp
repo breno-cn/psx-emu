@@ -31,7 +31,7 @@ uint32_t Instruction::shamt() {
 }
 
 uint32_t Instruction::funct() {
-    return this->word & 0x1f;
+    return this->word & 0x2f;
 }
 
 uint32_t Instruction::imm() {
@@ -49,6 +49,10 @@ uint32_t Instruction::signedImm() {
 
 uint32_t Instruction::addr() {
     return this->word & 0x3ffffff;
+}
+
+void Instruction::loadWord(uint32_t word) {
+    this->word = word;
 }
 
 //

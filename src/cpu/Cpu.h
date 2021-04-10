@@ -14,6 +14,8 @@
 class Cpu {
 private:
     uint32_t pc;
+    Instruction nextInstruction;
+
     std::array<uint32_t, 32> registers;
 
     Interconnect *interconnect;
@@ -43,6 +45,8 @@ public:
     void SW(Instruction& instruction);
     void SLL(Instruction& instruction);
     void ADDIU(Instruction& instruction);
+    void J(Instruction& instruction);
+    void OR(Instruction& instruction);
 };
 
 
