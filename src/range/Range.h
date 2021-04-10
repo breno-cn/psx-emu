@@ -26,6 +26,7 @@ namespace range {
     };
 
     static Range BIOS = Range(Cpu::PC_RESET_ADDR, Bios::SIZE);
+
 //    TODO: constantes apropriadas pra MEM_CONTROL
     static Range MEM_CONTROL = Range(0x1f801000, 36);
 }

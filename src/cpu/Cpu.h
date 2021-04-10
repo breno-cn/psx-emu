@@ -38,9 +38,10 @@ public:
 //    Opcodes
 
 //  LOAD UPPER IMMEDIATE
-    void LUI(Instruction instruction);
-    void ORI(Instruction instruction);
-    void SW(Instruction instruction);
+    void LUI(Instruction& instruction);
+    void ORI(Instruction& instruction);
+    void SW(Instruction& instruction);
+    void SLL(Instruction& instruction);
 };
 
 
