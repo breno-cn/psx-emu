@@ -177,9 +177,6 @@ void Cpu::branch(uint32_t offset) {
 }
 
 void Cpu::LUI(Instruction& instruction) {
-//    auto immediate = instruction.iType.imm;
-//    auto regIndex = instruction.iType.rt;
-
     auto immediate = instruction.imm();
     auto rt = instruction.rt();
 
@@ -191,10 +188,6 @@ void Cpu::LUI(Instruction& instruction) {
 
 
 void Cpu::ORI(Instruction& instruction) {
-//    auto immediate = instruction.iType.imm;
-//    auto regIndex = instruction.iType.rt;
-//    auto s = instruction.iType.rs;
-
     auto immediate = instruction.imm();
     auto rt = instruction.rt();
     auto rs = instruction.rs();
