@@ -5,7 +5,7 @@
 #include <cstdint>
 #include "utils.h"
 
-bool utils::checkedAddOverflow(int32_t a, int32_t b, int32_t *result) {
+bool utils::checkedAddOverflow(int32_t *result, int32_t a, int32_t b) {
     if (a > 0 && b > INT32_MAX - a)
         return true;
 

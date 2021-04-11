@@ -61,6 +61,7 @@ public:
     void OR(Instruction& instruction);
     void BNE(Instruction& instruction);
     void ADDI(Instruction& instruction);
+    void LW(Instruction& instruction);
 };
 
 

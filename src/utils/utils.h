@@ -8,7 +8,7 @@
 #include <cstdint>
 
 namespace utils {
-    bool checkedAddOverflow(int32_t a, int32_t b, int32_t *result);
+    bool checkedAddOverflow(int32_t *result, int32_t a, int32_t b);
 }
 
 #endif //PSX_UTILS_H

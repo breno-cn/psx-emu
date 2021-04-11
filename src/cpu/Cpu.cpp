@@ -118,6 +118,10 @@ void Cpu::decodeAndExecute(Instruction& instruction) {
             ADDI(instruction);
             break;
 
+        case 0b100011:
+            LW(instruction);
+            break;
+
         default:
             std::cout << "unhandled instruction " << std::hex << instruction.word << std::endl;
             std::exit(1);
@@ -281,14 +285,15 @@ void Cpu::BNE(Instruction &instruction) {
 }
 
 void Cpu::ADDI(Instruction &instruction) {
-    auto imm = instruction.signedImm();
+    auto imm = (int32_t) instruction.signedImm();
     auto rt = instruction.rt();
     auto rs = instruction.rs();
 
     auto signedRsValue = (int32_t) this->reg(rs);
-    int32_t result = 101010;
+    int32_t result = 0xdeadbeff;
 
-    auto didOverflow = utils::checkedAddOverflow(signedRsValue, imm, &result);
+//    auto didOverflow = utils::checkedAddOverflow(signedRsValue, imm, &result);
+    auto didOverflow = utils::checkedAddOverflow(&result, signedRsValue, imm);
     if (didOverflow) {
         std::cout << "ADDI overflow" << std::endl;
         std::exit(1);
@@ -298,6 +303,23 @@ void Cpu::ADDI(Instruction &instruction) {
 
     std::cout << "DEBUG ADDDI IMM = " << std::dec << imm << std::endl;
     std::cout << "REG " << std::dec << rt << std::endl;
+
+    this->setReg(rt, value);
+}
+
+void Cpu::LW(Instruction &instruction) {
+    if (this->sr & 0x10000 != 0) {
+//        Cache isolado, ignorando LW
+        std::cout << "ignorando LW enquanto o cache estiver isolado" << std::endl;
+        return;
+    }
+
+    auto imm = instruction.signedImm();
+    auto rt = instruction.rt();
+    auto rs = instruction.rs();
+
+    auto addr = this->reg(rs) + imm;
+    auto value = this->load32(addr);
 
     this->setReg(rt, value);
 }
