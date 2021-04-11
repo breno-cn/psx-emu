@@ -34,6 +34,9 @@ namespace range {
 //    TODO: etudar esse registrador, parece nao ser necessario emular ele para o ps1, apenas
 //          se fosse emular um processador MIPS completo
     static Range RAM_SIZE = Range(0x1f801060, 4);
+
+//    TODO: implementar CACHE_CONTROL
+    static Range CACHE_CONTROL = Range(0xfffe0130, 4);
 }
 
 

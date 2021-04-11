@@ -4,6 +4,7 @@
 
 #include "Cpu.h"
 #include "Instruction.h"
+#include "../utils/utils.h"
 
 #include <iostream>
 #include <cstdint>
@@ -42,6 +43,7 @@ void Cpu::runNextInstruction() {
 void Cpu::reset() {
     this->pc = Cpu::PC_RESET_ADDR;
     this->nextInstruction = Instruction(0x0);
+    this->sr = 0;
 
 //    Lixo de memoria que pode ajudar a debugar
     std::fill(registers.begin(), registers.end(),0xdeadbeef);
@@ -51,6 +53,14 @@ void Cpu::reset() {
 uint32_t Cpu::load32(uint32_t addr) {
     return this->interconnect->load32(addr);
 }
+
+//bool Cpu::checkAddOverflow(int32_t a, int32_t b, int32_t *result) {
+//    if (a > 0 && b > INT32_MAX - a)
+//        return true;
+//
+//    *result = a + b;
+//    return false;
+//}
 
 // TODO: talvez fazer um sistema de log, buscar alguma lib
 void Cpu::decodeAndExecute(Instruction& instruction) {
@@ -96,11 +106,70 @@ void Cpu::decodeAndExecute(Instruction& instruction) {
             J(instruction);
             break;
 
+        case 0b010000:
+            COP0(instruction);
+            break;
+
+        case 0b000101:
+            BNE(instruction);
+            break;
+
+        case 0b001000:
+            ADDI(instruction);
+            break;
+
         default:
             std::cout << "unhandled instruction " << std::hex << instruction.word << std::endl;
             std::exit(1);
     }
 
+}
+
+void Cpu::COP0(Instruction &instruction) {
+    std::cout << "parsing COP0 instruction " << std::hex << instruction.word << std::endl;
+
+    switch (instruction.rs()) {
+        case 0b00100:
+            MTC0(instruction);
+            break;
+
+        default:
+            std::cout << "unhandled cop0 instruction " << std::hex << instruction.word << std::endl;
+            std::exit(1);
+    }
+}
+
+void Cpu::MTC0(Instruction &instruction) {
+    std::cout << "INSTRUCTION MTC0" << std::endl;
+
+    auto cpuRt = instruction.rt();
+    auto copRd = instruction.rd();
+
+    auto value = this->reg(cpuRt);
+
+    switch (copRd) {
+        case 12:
+            this->sr = value;
+            break;
+
+        default:
+            std::cout << "unhandled cop0 register: " << copRd << std::endl;
+            std::exit(1);
+    }
+}
+
+void Cpu::branch(uint32_t offset) {
+//    Offsets de branch sempre sao multiplicados por 4 devido ao alinhamento da memoria
+    offset = offset << 2;
+
+    uint32_t pc = this->pc;
+
+    pc += offset;
+
+//    Precisamos compensar o add hardcoded em runNextInstruction
+    pc -= 4;
+
+    this->pc = pc;
 }
 
 void Cpu::LUI(Instruction& instruction) {
@@ -149,6 +218,12 @@ void Cpu::store32(uint32_t addr, uint32_t value) {
 }
 
 void Cpu::SW(Instruction& instruction) {
+//    Cache isolado, ignorar write
+    if ((this->sr & 0x10000) != 0) {
+        std::cout << "ignoring SW while cache is isolated" << std::endl;
+        return;
+    }
+
     auto immediate = instruction.signedImm();
     auto rt = instruction.rt();
     auto rs = instruction.rs();
@@ -193,4 +268,36 @@ void Cpu::OR(Instruction &instruction) {
     auto value = this->reg(rs) | this->reg(rt);
 
     this->setReg(rd, value);
+}
+
+void Cpu::BNE(Instruction &instruction) {
+//    auto imm = instruction.signedImm();
+    auto rs = instruction.rs();
+    auto rt = instruction.rt();
+
+    if (this->reg(rs) != this->reg(rt)) {
+        this->branch(instruction.imm());
+    }
+}
+
+void Cpu::ADDI(Instruction &instruction) {
+    auto imm = instruction.signedImm();
+    auto rt = instruction.rt();
+    auto rs = instruction.rs();
+
+    auto signedRsValue = (int32_t) this->reg(rs);
+    int32_t result = 101010;
+
+    auto didOverflow = utils::checkedAddOverflow(signedRsValue, imm, &result);
+    if (didOverflow) {
+        std::cout << "ADDI overflow" << std::endl;
+        std::exit(1);
+    }
+
+    auto value = (uint32_t) result;
+
+    std::cout << "DEBUG ADDDI IMM = " << std::dec << imm << std::endl;
+    std::cout << "REG " << std::dec << rt << std::endl;
+
+    this->setReg(rt, value);
 }

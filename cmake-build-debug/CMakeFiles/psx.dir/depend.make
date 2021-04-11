@@ -15,6 +15,7 @@ CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/cpu/Cpu.cpp
 CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/cpu/Cpu.h
 CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/cpu/Instruction.h
 CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/interconnect/Interconnect.h
+CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o: ../src/utils/utils.h
 
 CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o: ../src/cpu/Instruction.cpp
 CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o: ../src/cpu/Instruction.h
@@ -32,4 +33,7 @@ CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/cpu/Instruction.h
 CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/interconnect/Interconnect.h
 CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/range/Range.cpp
 CMakeFiles/psx.dir/src/range/Range.cpp.o: ../src/range/Range.h
+
+CMakeFiles/psx.dir/src/utils/utils.cpp.o: ../src/utils/utils.cpp
+CMakeFiles/psx.dir/src/utils/utils.cpp.o: ../src/utils/utils.h
 

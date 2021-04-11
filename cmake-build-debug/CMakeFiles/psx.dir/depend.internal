@@ -16,6 +16,7 @@ CMakeFiles/psx.dir/src/cpu/Cpu.cpp.o
  /home/breno/CLionProjects/psx/src/cpu/Cpu.h
  /home/breno/CLionProjects/psx/src/cpu/Instruction.h
  /home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
+ /home/breno/CLionProjects/psx/src/utils/utils.h
 CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o
  /home/breno/CLionProjects/psx/src/cpu/Instruction.cpp
  /home/breno/CLionProjects/psx/src/cpu/Instruction.h
@@ -33,3 +34,6 @@ CMakeFiles/psx.dir/src/range/Range.cpp.o
  /home/breno/CLionProjects/psx/src/interconnect/Interconnect.h
  /home/breno/CLionProjects/psx/src/range/Range.cpp
  /home/breno/CLionProjects/psx/src/range/Range.h
+CMakeFiles/psx.dir/src/utils/utils.cpp.o
+ /home/breno/CLionProjects/psx/src/utils/utils.cpp
+ /home/breno/CLionProjects/psx/src/utils/utils.h

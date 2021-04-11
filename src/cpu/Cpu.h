@@ -18,6 +18,9 @@ private:
 
     std::array<uint32_t, 32> registers;
 
+//    registrador 12 de Cop0: Status Register
+    uint32_t sr;
+
     Interconnect *interconnect;
 
 public:
@@ -37,9 +40,18 @@ public:
     void setReg(uint32_t index, uint32_t value);
     uint32_t reg(uint32_t index);
 
-//    Opcodes
+//    check overflow
 
-//  LOAD UPPER IMMEDIATE
+//  Retorna true caso haja overflow
+//    static bool checkAddOverflow(int32_t a, int32_t b, int32_t *result);
+
+//    Coprocessador 0
+    void COP0(Instruction& instruction);
+    void MTC0(Instruction& instruction);
+
+    void branch(uint32_t offset);
+
+//    Opcodes
     void LUI(Instruction& instruction);
     void ORI(Instruction& instruction);
     void SW(Instruction& instruction);
@@ -47,6 +59,8 @@ public:
     void ADDIU(Instruction& instruction);
     void J(Instruction& instruction);
     void OR(Instruction& instruction);
+    void BNE(Instruction& instruction);
+    void ADDI(Instruction& instruction);
 };
 
 

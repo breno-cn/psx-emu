@@ -51,8 +51,8 @@ uint32_t Instruction::addr() {
     return this->word & 0x3ffffff;
 }
 
-void Instruction::loadWord(uint32_t word) {
-    this->word = word;
+uint32_t Instruction::copOpcode() {
+    return (this->word >> 16) & 0x1f;
 }
 
 //

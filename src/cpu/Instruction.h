@@ -39,7 +39,7 @@ public:
     Instruction() = default;
     Instruction(uint32_t word);
 
-    void loadWord(uint32_t word);
+    uint32_t copOpcode();
 
     uint32_t op();
     uint32_t rs();

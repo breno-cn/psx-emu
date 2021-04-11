@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/breno/CLionProjects/psx/src/cpu/Instruction.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/src/cpu/Instruction.cpp.o"
   "/home/breno/CLionProjects/psx/src/interconnect/Interconnect.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/src/interconnect/Interconnect.cpp.o"
   "/home/breno/CLionProjects/psx/src/range/Range.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/src/range/Range.cpp.o"
+  "/home/breno/CLionProjects/psx/src/utils/utils.cpp" "/home/breno/CLionProjects/psx/cmake-build-debug/CMakeFiles/psx.dir/src/utils/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

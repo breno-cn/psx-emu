@@ -4,15 +4,14 @@
 
 #include "Bios.h"
 
-#include <stdlib.h>
-
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 
 Bios::Bios() {
     std::cout << "Criando BIOS" << std::endl;
 
-    std::ifstream file("SCPH1001.BIN", std::ios::in | std::ios::binary);
+    std::ifstream file("SCPH1001.BIN", std::ios::binary);
 
     file.seekg(0, std::ios::end);
     auto fileSize = file.tellg();
@@ -22,7 +21,7 @@ Bios::Bios() {
 
     if (fileSize > Bios::SIZE) {
         std::cout << "Tamanho da BIOS invalida" << std::endl;
-        exit(EXIT_FAILURE);
+        std::exit(1);
     }
 
 //    TODO: tirar cast
